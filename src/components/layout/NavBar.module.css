@@ -1,0 +1,49 @@
+nav{
+  display: flex;
+  justify-content: space-between;
+  padding:15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  box-shadow: var(--shadow);  
+}
+
+.menu{
+  display: flex;
+  justify-content: space-around;
+  width: 27vw;
+  max-width: 500px;
+  min-width: 386px;
+}
+
+.navLink {
+  position: relative;
+  padding: 0.4rem 0.8rem;
+  color: var(--text-h);
+  font-family: var(--heading);
+  font-weight: 500;
+  text-decoration: none;
+  background-color: #fff;
+  border-radius: 2px;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.5s ease;
+}
+
+.navLink::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: #d3062f;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+  z-index: -1;
+}
+
+.navLink:hover {
+  color: #fff;
+}
+
+.navLink:hover::before {
+  transform: scaleX(1);
+}
